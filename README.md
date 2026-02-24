@@ -28,15 +28,17 @@ WizzMania/
 │       ├── main.cpp
 │       ├── server.cpp
 │       └── server.h
-└── client/
-    ├── src/
-    │   ├── main.cpp
-    │   ├── mainwindow.cpp
-    │   └── mainwindow.h
-    ├── ui/
-    │   └── mainwindow.ui
-    └── resources/
-        └── resources.qrc
+├── client/
+│   ├── src/
+│   │   ├── main.cpp
+│   │   ├── client.cpp
+│   │   ├── client.h
+│   │   ├── mainwindow.cpp
+│   │   └── mainwindow.h
+│   ├── ui/
+│   │   └── mainwindow.ui
+│   └── resources/
+│       └── resources.qrc
 ├── docs/
 └── README.md
 ```
@@ -116,7 +118,7 @@ connect to server address and port
 
 ## contributing
 
-team members...
+**team members...**
 
 ## license
 
