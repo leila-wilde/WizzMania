@@ -1,41 +1,40 @@
-# Prerequisites
-*.d
-
-# Compiled Object files
-*.slo
-*.lo
+# C++ Compilation
 *.o
 *.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Linker files
-*.ilk
-
-# Debugger Files
-*.pdb
-
-# Compiled Dynamic libraries
+*.d
+*.a
+*.lib
 *.so
 *.dylib
 *.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
 *.exe
 *.out
 *.app
 
-# debug information files
-*.dwo
+# Qt Creator
+*.pro.user
+*.pro.user.*
+*.qbs.user
+moc_*.cpp
+ui_*.h
+qrc_*.cpp
+
+# Build directories
+build/
+debug/
+release/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+
+# IDE
+.vs/
+.vscode/
+.idea/
+*.swp
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+.directory
