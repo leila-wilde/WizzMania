@@ -8,7 +8,7 @@ set(CMAKE_AUTOMOC ON) # meta-object compiler (processes .h files with Qt signal/
 set(CMAKE_AUTORCC ON) # resource compiler (processes .qrc files(resource bundles), embeds images, icons, stylesheets into executable, generates qrc_*.cpp files)
 set(CMAKE_AUTOUIC ON) # user inferface compiler (processes .ui files, generates ui_*.h header files, makes UI elements accessible in code)
 
-find_package(Qt5 COMPONENTS Core Network GUI Widgets REQUIRED)
+find_package(Qt6 COMPONENTS Core Network Gui Widgets REQUIRED)
 
 # server executable
 add_executable()
