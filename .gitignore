@@ -19,6 +19,10 @@ moc_*.cpp
 ui_*.h
 qrc_*.cpp
 
+# qtcreator generated files
+*.pro.user*
+CMakeLists.txt.user*
+
 # Build directories
 build/
 debug/
