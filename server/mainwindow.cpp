@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
+#include "ClientChatWidget.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -18,11 +19,14 @@ void MainWindow::newClientConnected(QTcpSocket *client)
 {
     auto id = client->property("id").toInt();
     ui->lstClients->addItem(QString("New client added: %1").arg(id));
+    auto chatWidget = new ClientChatWidget(client);
+    ui->tbChats->addTab(chatWidget, QString("Client (%1").arg(id));
 }
 
 void MainWindow::clientDisconnected(QTcpSocket *client)
 {
-
+    auto id = client->property("id").toInt();
+    ui->lstClients->addItem(QString("Client disconnected: %1").arg(id));
 }
 
 void MainWindow::setupServer()

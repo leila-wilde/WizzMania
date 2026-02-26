@@ -39,6 +39,7 @@ else()
         add_executable(server
             ${PROJECT_SOURCES}
             ServerManager.h ServerManager.cpp
+            ClientChatWidget.h ClientChatWidget.cpp ClientChatWidget.ui
         )
     endif()
 endif()
