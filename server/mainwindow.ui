@@ -6,20 +6,54 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>759</width>
+    <height>356</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="3,1">
+    <item>
+     <widget class="QGroupBox" name="grpChats">
+      <property name="title">
+       <string>Chats</string>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout" stretch="0">
+       <item>
+        <widget class="QTabWidget" name="tbChats"/>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="grpClients">
+      <property name="title">
+       <string>Clients</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout" stretch="3,1">
+       <item>
+        <widget class="QListWidget" name="lstClients"/>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnDisconnectAll">
+         <property name="text">
+          <string>Disconnect all</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>759</width>
      <height>23</height>
     </rect>
    </property>
