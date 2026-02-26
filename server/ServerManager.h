@@ -11,7 +11,9 @@ public:
     explicit ServerManager(ushort port = 4500, QObject *parent = nullptr);
 
 private slots:
-    void newClientConnectionReceived();
+    void newClientConnectionReceived() {
+
+    };
 
 signals:
 
