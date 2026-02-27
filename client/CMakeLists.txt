@@ -38,6 +38,7 @@ else()
     else()
         add_executable(client
             ${PROJECT_SOURCES}
+            ClientManager.h ClientManager.cpp
         )
     endif()
 endif()
