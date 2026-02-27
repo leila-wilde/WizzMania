@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "ChatItemWidget.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -29,14 +30,28 @@ void MainWindow::on_actionConnect_triggered()
 
 void MainWindow::dataReceived(QByteArray data)
 {
-    ui->lstMessages->addItem(data);
+    // ui->lstMessages->addItem(data);
+    auto chatWidget = new ChatItemWidget(this);
+    chatWidget->setMessage(data);
+    auto listItemWidget = new QListWidgetItem();
+    listItemWidget->setSizeHint(QSize(ui->lstMessages->width(), chatWidget->sizeHint().height()));
+    ui->lstMessages->addItem(listItemWidget);
+    listItemWidget->setBackground(QColor(255, 255, 200));
+    ui->lstMessages->setItemWidget(listItemWidget, chatWidget);
 }
 
 void MainWindow::on_btnSend_clicked()
 {
     auto message = ui->lnMessage->text().trimmed();
     _client->sendMessage(message);
-    ui->lstMessages->addItem(message);
     ui->lnMessage->setText("");
-}
+    // ui->lstMessages->addItem(message);
 
+    auto chatWidget = new ChatItemWidget(this);
+    chatWidget->setMessage(message, true);
+    auto listItemWidget = new QListWidgetItem();
+    listItemWidget->setSizeHint(QSize(ui->lstMessages->width(), chatWidget->sizeHint().height()));
+    ui->lstMessages->addItem(listItemWidget);
+    listItemWidget->setBackground(QColor(255, 230, 230));
+    ui->lstMessages->setItemWidget(listItemWidget, chatWidget);
+}
