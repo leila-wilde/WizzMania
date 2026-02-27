@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "ClientManager.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -17,7 +18,13 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+    void on_actionConnect_triggered();
+    void dataReceived(QByteArray data);
+    void on_btnSend_clicked();
+
 private:
     Ui::MainWindow *ui;
+    ClientManager *_client;
 };
 #endif // MAINWINDOW_H
