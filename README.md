@@ -24,24 +24,26 @@ WizzMania is a real-time chat application featuring a centralized server handlin
 WizzMania/
 ├── CMakeLists.txt
 ├── server/
-│   ├── src/
-│   │   ├── main.cpp
-│   │   ├── ServerManager.cpp
-│   │   └── ServerManager.h
-│   │   ├── mainwindow.cpp
-│   │   └── mainwindow.h
+│   ├── CMakeLists.txt
+│   ├── main.cpp
+│   ├── ServerManager.cpp
+│   ├── ServerManager.h
+│   ├── ClientChatWidget.cpp
+│   ├── ClientChatWidget.h
+│   ├── ClientChatWidget.ui
+│   ├── mainwindow.cpp
+│   ├── mainwindow.h
+│   └── mainwindow.ui
 ├── client/
-│   ├── src/
-│   │   ├── main.cpp
-│   │   ├── client.cpp
-│   │   ├── client.h
-│   │   ├── mainwindow.cpp
-│   │   └── mainwindow.h
-│   ├── ui/
-│   │   └── mainwindow.ui
-│   └── resources/
-│       └── resources.qrc
+│   ├── CMakeLists.txt
+│   ├── main.cpp
+│   ├── ClientManager.cpp
+│   ├── ClientManager.h
+│   ├── mainwindow.cpp
+│   ├── mainwindow.h
+│   └── mainwindow.ui
 ├── docs/
+├── LICENSE
 └── README.md
 ```
 
