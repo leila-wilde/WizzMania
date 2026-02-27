@@ -52,7 +52,6 @@ WizzMania/
 - **real-time messaging** - instant message delivery via TCP/IP protocol
 - **multi-client support** - server handles concurrent client connections
 - **Qt GUI** - cross-platform user interface (Qt 6)
-- **integrated games** - built-in games accessible to all chat participants
 
 ## requirements
 
@@ -86,6 +85,7 @@ brew install qt@6
 
 ### build steps
 
+**Using CMake:**
 ```bash
 mkdir build
 cd build
@@ -93,10 +93,9 @@ cmake ..
 make
 ```
 
-or using Qt Creator:
-1. open `CMakeLists.txt` or `.pro` file in Qt Creator
-2. configure the project
-3. build
+**Using Qt Creator:**
+1. Open `CMakeLists.txt` in Qt Creator
+2. Configure and build
 
 ## running
 
@@ -104,7 +103,7 @@ or using Qt Creator:
 ```bash
 ./build/server
 ```
-server listens on `localhost:5000` (default)
+server listens on `localhost:4500` (default)
 
 ### start client(s)
 ```bash
@@ -115,10 +114,11 @@ connect to server address and port
 ## project status
 
 - [x] project structure
-- [ ] server implementation
-- [ ] client implementation
-- [ ] Qt UI
+- [x] server implementation (ServerManager, ClientChatWidget)
+- [x] client implementation (ClientManager)
+- [x] Qt GUI (server and client UIs)
 - [ ] tests
+- [ ] integrated games (future)
 
 ## contributing
 
