@@ -22,6 +22,15 @@ qrc_*.cpp
 # qtcreator generated files
 *.pro.user*
 CMakeLists.txt.user*
+*.creator
+*.creator.user
+*.cflags
+*.cxxflags
+*.files
+*.includes
+*.config
+.qt/
+.qtc_clangd/
 
 # Build directories
 build/
@@ -30,6 +39,7 @@ release/
 CMakeFiles/
 CMakeCache.txt
 cmake_install.cmake
+CMakeUserPresets.json
 
 # IDE
 .vs/
